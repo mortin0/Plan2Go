@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'components/button.dart';
+//import 'components/button.dart';
 import 'components/dropdown.dart';
 
 void main() {
@@ -29,26 +29,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-  String _text = 'lib/images/image1.svg';
-  void _incrementCounter() {
+  String _path = "lib/images/None_selected.svg";
+  String? _selectedState = 'None selected';
+  
+  void choosePath() {
     setState(() {
-      if (_counter == 2) _counter = 0;
-      _counter++;
-      switch(_counter) {
-        case 1:
-          _text = 'lib/images/image1.svg';
-          break;
-        case 2:
-          _text = 'lib/images/Vek.svg';
-          break;
-        default:
-          _text = '';
-      }
+      String part = _selectedState!.replaceAll(' ', '_');
+      _path = 'lib/images/$part.svg';
     });
   }
-
-  String? _selectedState = "None selected";
 
   final List<String> rooms = [
     'Hörsaal 1',
@@ -85,49 +74,45 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-          SizedBox(height: 20,),
-          DropDown(
-            selectedState: _selectedState,
-            onChanged: (String? newValue) {
-            setState(() {
-              _selectedState = newValue;
-              });
-            },
-            rooms: rooms,
-          ),
-          Expanded(
-            child: ListView(
-              children: [
-                AspectRatio(
-                  aspectRatio: 9 / 16,
-                  child: InteractiveViewer(
-                    maxScale: 10,
-                    child: SvgPicture.asset(
-                      //width: 400,
-                      //height: 500,
-                      _text,
+            SizedBox(height: 20),
+            DropDown(
+              selectedState: _selectedState,
+              onChanged: (String? newValue) {
+                setState(() {
+                  _selectedState = newValue;
+                  });
+                choosePath();
+              },
+              rooms: rooms,
+            ),
+            Expanded(
+              child: ListView(
+                children: [
+                  AspectRatio(
+                    aspectRatio: 9 / 16,
+                    child: InteractiveViewer(
+                      maxScale: 10,
+                      child: SvgPicture.asset(
+                        _path,
+                      ),
                     ),
                   ),
-                ),
-                /*InteractiveViewer(
-                  maxScale: 10,
-                  child: SvgPicture.asset(
-                    width: 400,
-                    height: 750,
-                    _text,
-                  )
-                ),*/
-                //SizedBox(height: 100),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 0.0),
-                  child: SwitchButton(
+                  /*InteractiveViewer(
+                    maxScale: 10,
+                    child: SvgPicture.asset(
+                      width: 400,
+                      height: 750,
+                      _path,
+                    )
+                  ),*/
+                  //SizedBox(height: 100),
+                  /*SwitchButton(
                     myText: 'switch',
-                    event: _incrementCounter,
-                  ),
-                ),
-              ],
-            ),
-          )
+                    event: choosePath,
+                  ),*/
+                ],
+              ),
+            )
           ],
         ),
       ),
