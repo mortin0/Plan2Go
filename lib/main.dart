@@ -61,18 +61,28 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 00),
-            InteractiveViewer(
+            AspectRatio(
+              aspectRatio: 9 / 16,
+              child: InteractiveViewer(
+                maxScale: 10,
+                child: SvgPicture.asset(
+                  //width: 400,
+                  //height: 500,
+                  _text,
+                ),
+              ),
+            ),
+            /*InteractiveViewer(
               maxScale: 10,
               child: SvgPicture.asset(
                 width: 400,
                 height: 750,
                 _text,
               )
-            ),
-            SizedBox(height: 5),
+            ),*/
+            //SizedBox(height: 100),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 0.0),
               child: SwitchButton(
                 myText: 'switch',
                 event: _incrementCounter,
@@ -80,18 +90,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-        /*child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter $_text',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),*/
       ),
     );
   }

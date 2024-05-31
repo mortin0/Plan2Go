@@ -14,10 +14,10 @@ class SwitchButton extends StatelessWidget {
     return GestureDetector(
       onTap: event,
       child: Container(
-        padding: EdgeInsets.all(5),
+        padding: EdgeInsets.all(2.4),
         decoration: BoxDecoration(
           color: Colors.green,
-          borderRadius: BorderRadius.circular(20),
+          //borderRadius: BorderRadius.circular(20),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -26,7 +26,7 @@ class SwitchButton extends StatelessWidget {
               myText,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 20,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
             ),
