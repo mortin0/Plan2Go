@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
             rooms: rooms,
           ),
           Expanded(
-            child: Column(
+            child: ListView(
               children: [
                 AspectRatio(
                   aspectRatio: 9 / 16,
