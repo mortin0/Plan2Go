@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:plan_2_go/components/button.dart';
+import 'components/button.dart';
+import 'components/dropdown.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -50,6 +48,31 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  String? _selectedState = "None selected";
+
+  final List<String> rooms = [
+    'Hörsaal 1',
+    'Hörsaal 2',
+    'Hörsaal 3',
+    'Hörsaal 4',
+    'Hörsaal 5',
+    'Hörsaal 6',
+    'Hörsaal 7',
+    'Hörsaal 8',
+    'Hörsaal 9',
+    'Hörsaal 10',
+    'Hörsaal 11',
+    'Hörsaal 12',
+    'Hörsaal 13',
+    'Hörsaal 14',
+    'Hörsaal 15',
+    'Hörsaal 16',
+    'Hörsaal 17',
+    'Hörsaal 18',
+    'Hörsaal 19',
+    'None selected',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,34 +83,51 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            AspectRatio(
-              aspectRatio: 9 / 16,
-              child: InteractiveViewer(
-                maxScale: 10,
-                child: SvgPicture.asset(
-                  //width: 400,
-                  //height: 500,
-                  _text,
+          SizedBox(height: 20,),
+          DropDown(
+            selectedState: _selectedState,
+            onChanged: (String? newValue) {
+            setState(() {
+              _selectedState = newValue;
+              });
+            },
+            rooms: rooms,
+          ),
+          Expanded(
+            child: Column(
+              children: [
+                AspectRatio(
+                  aspectRatio: 9 / 16,
+                  child: InteractiveViewer(
+                    maxScale: 10,
+                    child: SvgPicture.asset(
+                      //width: 400,
+                      //height: 500,
+                      _text,
+                    ),
+                  ),
                 ),
-              ),
+                /*InteractiveViewer(
+                  maxScale: 10,
+                  child: SvgPicture.asset(
+                    width: 400,
+                    height: 750,
+                    _text,
+                  )
+                ),*/
+                //SizedBox(height: 100),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 0.0),
+                  child: SwitchButton(
+                    myText: 'switch',
+                    event: _incrementCounter,
+                  ),
+                ),
+              ],
             ),
-            /*InteractiveViewer(
-              maxScale: 10,
-              child: SvgPicture.asset(
-                width: 400,
-                height: 750,
-                _text,
-              )
-            ),*/
-            //SizedBox(height: 100),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 0.0),
-              child: SwitchButton(
-                myText: 'switch',
-                event: _incrementCounter,
-              ),
-            ),
+          )
           ],
         ),
       ),
