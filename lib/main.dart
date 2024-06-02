@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'components/dropdown.dart';
 
@@ -90,13 +91,28 @@ class _MyHomePageState extends State<MyHomePage> {
             //AspectRatio(
               //aspectRatio: 9 / 15,
               //child: InteractiveViewer(
-              InteractiveViewer(
+
+            Expanded(
+              child: InteractiveViewer(
                 maxScale: 10,
                 child: SvgPicture.asset(
-                  height: 700,
+                  // height: 700,
                   _path,
+                  fit:BoxFit.contain,
                 ),
               ),
+            ),
+
+
+              // InteractiveViewer(
+              //   maxScale: 10,
+              //   child: SvgPicture.asset(
+              //     height: 700,
+              //     _path,
+              //     fit:BoxFit.contain,
+              //   ),
+              // ),
+
             //),
             //SizedBox(height: 100),
             /*SwitchButton(
