@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-//import 'components/button.dart';
 import 'components/dropdown.dart';
 
 void main() {
@@ -85,34 +84,25 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               rooms: rooms,
             ),
-            Expanded(
-              child: ListView(
-                children: [
-                  AspectRatio(
-                    aspectRatio: 9 / 16,
-                    child: InteractiveViewer(
-                      maxScale: 10,
-                      child: SvgPicture.asset(
-                        _path,
-                      ),
-                    ),
-                  ),
-                  /*InteractiveViewer(
-                    maxScale: 10,
-                    child: SvgPicture.asset(
-                      width: 400,
-                      height: 750,
-                      _path,
-                    )
-                  ),*/
-                  //SizedBox(height: 100),
-                  /*SwitchButton(
-                    myText: 'switch',
-                    event: choosePath,
-                  ),*/
-                ],
+            //Expanded(
+            //  child: ListView()
+            //),
+            //AspectRatio(
+              //aspectRatio: 9 / 15,
+              //child: InteractiveViewer(
+              InteractiveViewer(
+                maxScale: 10,
+                child: SvgPicture.asset(
+                  height: 700,
+                  _path,
+                ),
               ),
-            )
+            //),
+            //SizedBox(height: 100),
+            /*SwitchButton(
+              myText: 'switch',
+              event: choosePath,
+            ),*/  
           ],
         ),
       ),
