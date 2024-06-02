@@ -89,6 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 maxScale: 10,
                 child: SvgPicture.asset(
                   _path,
+                  fit:BoxFit.contain,
                 ),
               ),
             ),
