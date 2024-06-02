@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="2800.00" height="1752.00" viewBox="0.00 0.00 2800.00 1752.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g stroke-linecap="round" id="Vek_Eingänge">
+<g stroke-linecap="round" id="HS67_G">
 <path d="M2994.28,1048.64" fill="none" stroke="rgb(2, 16, 6)" stroke-width="10.70" stroke-opacity="1.00" stroke-linejoin="round"/>
 <path d="M2986.57,1034.51" fill="none" stroke="rgb(2, 16, 6)" stroke-width="10.70" stroke-opacity="1.00" stroke-linejoin="round"/>
 <path d="M412.36,389.94 L406.33,453.36" fill="none" stroke="rgb(2, 16, 6)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
@@ -677,5 +677,27 @@
 <path d="M2374.96,1377.78 L2411.78,1440.05" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 <path d="M2387.91,1399.24 L2396.82,1414.52" fill="none" stroke="rgb(229, 174, 19)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 <path d="M2646.21,1718.84 L2639.43,1712.35" fill="none" stroke="rgb(229, 174, 19)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1143.00,309.57" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1134.88,308.97 L1138.13,309.70" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1141.32,309.73 L1143.07,309.92" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1124.59,307.57 L1120.68,334.10" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1121.20,333.17 L1140.43,335.40" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1140.10,335.18 L1143.88,309.81" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1123.14,332.01 L1126.35,309.09" fill="none" stroke="rgb(195, 241, 213)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1128.05,309.04 L1125.00,331.79" fill="none" stroke="rgb(195, 241, 213)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1127.22,332.35 L1129.75,309.57" fill="none" stroke="rgb(195, 241, 213)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1131.77,309.92 L1128.43,332.50" fill="none" stroke="rgb(195, 241, 213)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1133.87,309.95 L1130.11,332.88" fill="none" stroke="rgb(195, 241, 213)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1135.82,310.45 L1132.10,333.06" fill="none" stroke="rgb(195, 241, 213)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1137.86,310.75 L1134.29,333.07" fill="none" stroke="rgb(195, 241, 213)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1139.44,310.92 L1135.85,333.38" fill="none" stroke="rgb(195, 241, 213)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1141.33,311.02 L1136.85,333.64" fill="none" stroke="rgb(195, 241, 213)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1141.69,311.23 L1138.07,333.59" fill="none" stroke="rgb(195, 241, 213)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1121.44,328.50 L1140.42,330.54" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1122.03,323.81 L1140.79,326.00" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1122.77,319.51 L1141.27,321.76" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1123.19,315.85 L1142.92,317.16" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1132.37,316.69 L1130.03,333.69" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1130.44,334.43 L1139.71,335.36" fill="none" stroke="rgb(255, 255, 50)" stroke-width="3.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 </g>
 </svg>
