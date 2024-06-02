@@ -84,25 +84,14 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               rooms: rooms,
             ),
-            //Expanded(
-            //  child: ListView()
-            //),
-            //AspectRatio(
-              //aspectRatio: 9 / 15,
-              //child: InteractiveViewer(
-              InteractiveViewer(
+            Expanded(
+              child: InteractiveViewer(
                 maxScale: 10,
                 child: SvgPicture.asset(
-                  height: 700,
                   _path,
                 ),
               ),
-            //),
-            //SizedBox(height: 100),
-            /*SwitchButton(
-              myText: 'switch',
-              event: choosePath,
-            ),*/  
+            ),
           ],
         ),
       ),
