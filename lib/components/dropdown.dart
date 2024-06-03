@@ -21,10 +21,11 @@ class DropDown extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(5),
       ),
-      width: 230,
+      width: 270,
       child: DropdownButtonFormField<String>(
         value: selectedState,
         style: const TextStyle(
+          fontFamily: 'MonoFont',
           color: Colors.black,
           fontSize: 18,
         ),
