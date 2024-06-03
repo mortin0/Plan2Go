@@ -24,7 +24,7 @@ class DropDown extends StatelessWidget {
       width: 230,
       child: DropdownButtonFormField<String>(
         value: selectedState,
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.black,
           fontSize: 18,
         ),
@@ -34,7 +34,7 @@ class DropDown extends StatelessWidget {
             value: value,
             child: Row(
               children: [
-                SizedBox(width: 15,),
+                const SizedBox(width: 15,),
                 Text(value)
               ],),
           );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:plan_2_go/components/button.dart';
-import 'package:plan_2_go/components/dropdown.dart';
+//import 'package:plan_2_go/components/button.dart';
+import 'components/dropdown.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,33 +34,37 @@ class _MyHomePageState extends State<MyHomePage> {
   
   void choosePath() {
     setState(() {
-      String part = (_selectedState!.substring(1, 10)).trim();
-      part = part.replaceAll(' ', '_');
-      _path = 'lib/images/$part.svg';
+      if (_selectedState!.contains(RegExp('\\d'))) {
+        String part = (_selectedState!.substring(0, 10)).trim();
+        part = part.replaceAll(' ', '_');
+        _path = 'lib/images/$part.svg';
+      } else {
+        _path = 'lib/images/None_selected.svg';
+      }
     });
   }
 
-  void noneSelected() {
+  /*void noneSelected() {
     setState(() {
       _path = 'lib/images/None_selected.svg';
     });
-  }
+  }*/
 
   final List<String> rooms = [
-    'Hörsaal 1 - K - 041B',
-    'Hörsaal 2 - HT - 182E',
-    'Hörsaal 3 - HT - 180E',
-    'Hörsaal 4 - HT - 179F',
-    'Hörsaal 5 - HT - 175G',
-    'Hörsaal 6 - HT - 174H',
-    'Hörsaal 7 - HT - 172H',
-    'Hörsaal 8 - P - 013',
-    'Hörsaal 9 - HG - 001',
+    'Hörsaal 1  - K  - 041B',
+    'Hörsaal 2  - HT - 182E',
+    'Hörsaal 3  - HT - 180E',
+    'Hörsaal 4  - HT - 179F',
+    'Hörsaal 5  - HT - 175G',
+    'Hörsaal 6  - HT - 174H',
+    'Hörsaal 7  - HT - 172H',
+    'Hörsaal 8  - P  - 013',
+    'Hörsaal 9  - HG - 001',
     'Hörsaal 10 - HG - 101',
-    'Hörsaal 11 - T - 008',
-    'Hörsaal 12 - T - 006',
-    'Hörsaal 13 - T - 007',
-    'Hörsaal 14 - T - 008',
+    'Hörsaal 11 - T  - 008',
+    'Hörsaal 12 - T  - 006',
+    'Hörsaal 13 - T  - 007',
+    'Hörsaal 14 - T  - 008',
     'Hörsaal 15 - MZ - 001A',
     'Hörsaal 16 - MZ - 009A',
     'Hörsaal 17 - MZ - 001B',
@@ -81,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             DropDown(
               selectedState: _selectedState,
               onChanged: (String? newValue) {
@@ -102,10 +106,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            SwitchButton(
+            /*SwitchButton(
               myText: 'switch',
               event: noneSelected,
-            ),
+            ),*/
           ],
         ),
       ),
