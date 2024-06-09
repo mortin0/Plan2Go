@@ -79,9 +79,7 @@ flutter:
   fonts:
   - family: MonoFont
     fonts:
-      #- asset: lib/fonts/LUCON.ttf
       - asset: lib/fonts/CONSOLA.ttf
-      #- asset: lib/fonts/COUR.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

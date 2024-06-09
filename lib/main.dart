@@ -29,8 +29,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String _tempPath = '';
   String _path = 'lib/images/None_selected.svg';
   String? _selectedState = 'None selected';
+  String _switch = 'switch to default plan';
   
   void choosePath() {
     setState(() {
@@ -38,17 +40,26 @@ class _MyHomePageState extends State<MyHomePage> {
         String part = (_selectedState!.substring(0, 10)).trim();
         part = part.replaceAll(' ', '_');
         _path = 'lib/images/$part.svg';
+        _switch = 'switch to default plan';
       } else {
         _path = 'lib/images/None_selected.svg';
       }
     });
   }
 
-  /*void noneSelected() {
+  void switchView() {
     setState(() {
-      _path = 'lib/images/None_selected.svg';
+      if (_tempPath.isEmpty) {
+        _tempPath = _path;
+        _path = 'lib/images/None_selected.svg';
+        _switch = 'switch back to room plan';
+      } else {
+        _path = _tempPath;
+        _tempPath = '';
+        _switch = 'switch to default plan';
+      }
     });
-  }*/
+  }
 
   final List<String> rooms = [
     'Hörsaal 1  - K  - 041B',
@@ -107,8 +118,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             /*SwitchButton(
-              myText: 'switch',
-              event: noneSelected,
+              myText: _switch,
+              event: switchView,
             ),*/
           ],
         ),
