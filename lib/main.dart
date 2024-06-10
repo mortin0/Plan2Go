@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-//import 'package:plan_2_go/components/button.dart';
 import 'components/dropdown.dart';
 
 void main() {
@@ -29,10 +28,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String _tempPath = '';
   String _path = 'lib/images/None_selected.svg';
   String? _selectedState = 'None selected';
-  String _switch = 'switch to default plan';
   
   void choosePath() {
     setState(() {
@@ -40,23 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
         String part = (_selectedState!.substring(0, 10)).trim();
         part = part.replaceAll(' ', '_');
         _path = 'lib/images/$part.svg';
-        _switch = 'switch to default plan';
-      } else {
-        _path = 'lib/images/None_selected.svg';
-      }
-    });
-  }
-
-  void switchView() {
-    setState(() {
-      if (_tempPath.isEmpty) {
-        _tempPath = _path;
-        _path = 'lib/images/None_selected.svg';
-        _switch = 'switch back to room plan';
-      } else {
-        _path = _tempPath;
-        _tempPath = '';
-        _switch = 'switch to default plan';
       }
     });
   }
@@ -117,10 +97,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            /*SwitchButton(
-              myText: _switch,
-              event: switchView,
-            ),*/
           ],
         ),
       ),
