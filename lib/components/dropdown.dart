@@ -21,7 +21,7 @@ class DropDown extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(5),
       ),
-      width: 270,
+      width: 300,
       child: DropdownButtonFormField<String>(
         value: selectedState,
         style: const TextStyle(

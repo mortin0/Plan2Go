@@ -79,7 +79,7 @@ flutter:
   fonts:
   - family: MonoFont
     fonts:
-      - asset: lib/fonts/CONSOLA.ttf
+      - asset: lib/fonts/CONSOLA.TTF
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
